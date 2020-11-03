@@ -1,0 +1,38 @@
+{define pagination}
+<div>
+    Total: {$characterList->getCount()}
+    Pages: {$characterList->getPages()}
+    <a n:if="$characterList->getPrev()" href="/characters/page/{$characterList->getPrev()}">Previous</a>
+    {for $i = 1; $i < $characterList->getPages() +1; $i++}
+        <a href="/characters/page/{$i}">{$i}</a>
+    {/for}
+    <a n:if="$characterList->getNext()" href="/characters/page/{$characterList->getPrev()}">Next</a>
+</div>
+{/define}
+
+{include pagination}
+
+<table>
+    <thead>
+    <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Gender</th>
+        <th>Species</th>
+        <th>Location</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr n:foreach="$characterList->getCharacters() as $character">
+        <td><img src="{$character->getImage()}" alt="{$character->getName()}"></td>
+        <td>{$character->getName()}</td>
+        <td>{$character->getStatus()}</td>
+        <td>{$character->getGender()}</td>
+        <td>{$character->getSpecies()}</td>
+        <td>{$character->getLocation()}</td>
+    </tr>
+    </tbody>
+</table>
+
+{include pagination}
