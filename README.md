@@ -1,7 +1,7 @@
 ## Rick & Morty characters and locations
 
 ##### Requirements:
- - PHP 7.1
+ - minimum PHP 7.1
  - composer
  
 ##### How to run:
@@ -12,7 +12,8 @@
 Application is ready @ http://localhost:8000/
  
 ##TODO
-- TESTS!!!
+ - TESTS!!!
+ - error handling
  - get rid of configuration via constant
  - fix dependency injection problems in some cases
     - classes should depend on interfaces instead of implementations
