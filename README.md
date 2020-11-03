@@ -19,9 +19,11 @@ Application is ready @ http://localhost:8000/
  - complete autoload via composer 
     - create local composer projects
     - get rid of RobotLoader
+ - clean up templates
  - add more layers
- - rename App namespace
+ - refactor and rename App namespace since it is too general
  - add features like filtering, search
  - implement locations
+ - add css/js
  
  
