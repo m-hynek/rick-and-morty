@@ -13,6 +13,7 @@ Application is ready @ http://localhost:8000/
  
 ##TODO
 - TESTS!!!
+ - get rid of configuration via constant
  - fix dependency injection problems in some cases
     - classes should depend on interfaces instead of implementations
     - get rid of static
